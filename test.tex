@@ -1,0 +1,61 @@
+
+
+A text maths environment is one that displays the mathematical
+equation/symbol inline, with the current text. This is opposed to the
+displayed environments, as we shall see later, that separate the maths
+from the text. So, if we wanted to mention that \(a + a = 2a\) within
+current sentence, then this environment is the best to use.
+
+\begin{table}[!htp]
+\begin{tabular}{|l|l|l|}
+\hline
+  Method & Command & Output \\ \hline
+  Standard & \verb|\begin{math}a + a = 2a\end{math}| & \begin{math}a + a = 2a\end{math} \\ \hline
+  Latex & \verb|\(a + a = 2a\)| & \(a + a = 2a\) \\ \hline
+  Tex & \verb|$a + a = 2a$| & $a + a = 2a$ \\ \hline
+\end{tabular}
+\caption{Ways to use the text maths enviroment}
+\end{table}
+
+\section{Displayed environments}
+
+\subsection{\texttt{displaymath}}
+
+Displayed maths environments position the maths within it differently.
+It's separate from the preceeding text (and subsequent text for that
+matter) as well as centered. It's also possible to number equations that
+are in this mode. So, if we wanted to state that the equation to find
+the volume of a sphere is: \[\frac{4}{3}\pi r^2\]
+
+Even though in the Latex source file, the maths command is at the end of
+the previous paragraph, Latex will not display it inline, as we can see.
+
+\begin{table}[!htp]
+\begin{tabular}{|l|l|l|}
+\hline
+  Method & Command \\ \hline
+  Standard & \verb|\begin{displaymath}\frac{4}{3}\pi r^2\end{displaymath}| \\ \hline
+  Latex & \verb|\[\frac{4}{3}\pi r^2\]| \\ \hline
+  Tex & \verb|$$\frac{4}{3}\pi r^2$$| \\ \hline
+\end{tabular}
+\caption{Ways to use the displayed maths enviroment}
+\end{table}
+
+\subsection{\texttt{equation}}
+
+The \texttt{equation} environment is almost identical to that of
+\texttt{displaymath}, with the exception being that equation numbers are
+also added along side the displayed mathematics. This is useful for
+documents that contain many mathematical formulas and you wish to
+cross-reference them in the main text. For example, see equation \ref{binomial} for
+the formular for binomial distribution. Unfornately, there is no
+shorthand way to enter the equation environment, just the usual
+\verb|\begin{...} ... \end{...}|.
+
+\begin{equation}
+b\left(k; n, x\right) = \left( \begin{array}{c} n \\ k \end{array}\right) x^k\left(1-x\right)^{n-k}
+\label{binomial}
+\end{equation}
+
+
+\end{document}
